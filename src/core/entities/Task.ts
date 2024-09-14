@@ -14,4 +14,7 @@ export class Task {
 
     @Column()
     priority!: string;
+
+    @Column()
+    deadline!: string;
 }
