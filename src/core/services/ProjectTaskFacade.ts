@@ -10,7 +10,7 @@ export class ProjectTaskFacade {
 
     async createProjectWithTask(projectName: string, taskDescription: string) {
         const project = await this.projectService.createProject(projectName);
-        await this.taskService.createTask(taskDescription, project.id);
+        await this.taskService.createTask(taskDescription, project.id, "2021-12-31");
         return project;
     }
 

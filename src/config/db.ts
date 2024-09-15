@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 5432,
     username: "postgres",   // Reemplaza con tu usuario
-    password: "postgres",   // Reemplaza con tu contraseña
+    password: "123456",   // Reemplaza con tu contraseña
     database: "project_management",
     entities: [Project, Task],
     synchronize: true,           // Solo para desarrollo (no usar en producción)

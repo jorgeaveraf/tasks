@@ -15,10 +15,11 @@ export class TaskService {
     }
 
     // Crear una nueva tarea y notificar a los observadores
-    async createTask(description: string, projectId: number): Promise<Task> {
+    async createTask(description: string, projectId: number, deadline: string): Promise<Task> {
         const task = new Task();
         task.description = description;
         task.project = { id: projectId } as any;
+        task.deadline = deadline;
         task.priority = this.calculateTaskPriority(task).toString();
 
         // Guardar la tarea
