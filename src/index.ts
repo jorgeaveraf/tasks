@@ -11,9 +11,10 @@ import { DeadlinePriority, PriorityStrategy } from './core/strategies/PrioritySt
 // Inicializamos el servidor Express
 const app = express();
 app.use(express.json());
+const dataSource = AppDataSource.getInstance();
 
 // Inicializar la base de datos
-AppDataSource.initialize()
+dataSource.initialize()
     .then(() => {
         console.log("Conexión a la base de datos exitosa.");
 

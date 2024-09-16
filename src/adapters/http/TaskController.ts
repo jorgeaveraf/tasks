@@ -33,7 +33,7 @@ export class TaskController {
         const employee = new Employee();
         taskService.addObserver(employee);
         
-        const task = await customTaskService.createTask(description, parseInt(projectId));
+        const task = await customTaskService.createTask(description, parseInt(projectId), "2021-12-31");
         res.status(201).json(task);
     }
 
